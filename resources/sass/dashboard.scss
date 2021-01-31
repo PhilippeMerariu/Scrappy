@@ -1,0 +1,55 @@
+.add-group-button {
+    width: 120px !important;
+    height: 120px !important;
+}
+
+.zoom {
+    object-fit: cover;
+}
+
+.border-3 {
+    border-width:3px !important;
+}
+
+.add-content-button {
+    width: 15em !important;
+    height: 210px !important;
+}
+
+.content-card {
+    width: 15em !important;
+    height: 210px !important;
+}
+
+.content-inline {
+    display: inline-block;
+}
+
+.spinner {
+    margin: auto;
+    position: absolute;
+    top: 20%; left: 50%; bottom: 0; right: 0;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.real-size-image {
+    width: 100%;
+}
+
+h3 {
+    margin-right: 7px;
+    display: inline;
+}
+
+.button-float {
+    float: right;
+}
+
+.limited-width {
+    width: 200px;
+}
