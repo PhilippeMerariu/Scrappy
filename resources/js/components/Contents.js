@@ -14,7 +14,8 @@ class Contents extends Component {
             showAddContentModal: false,
             showSettingsModal: false,
             showContentModal: false,
-            selectedUrl: ""
+            selectedUrl: "",
+            contentCaption:""
         }
         this.showSettingsModal = this.showSettingsModal.bind(this);
         this.showContentModal = this.showContentModal.bind(this);
@@ -24,8 +25,8 @@ class Contents extends Component {
         this.setState({showSettingsModal: show});
     }
 
-    showContentModal(show, url) {
-        this.setState({showContentModal: show, selectedUrl: url});
+    showContentModal(show, url, caption) {
+        this.setState({showContentModal: show, selectedUrl: url, contentCaption: caption});
     }
 
     onChangeFile(event, caption) {
@@ -76,7 +77,7 @@ class Contents extends Component {
                             <div
                                 className="card content-card ml-2 mr-2 mt-1"
                                 key={content.id}
-                                onClick={() => this.showContentModal(true, content.content_picture.url)}
+                                onClick={() => this.showContentModal(true, content.content_picture.url, content.caption)}
                             >
 
                                 <img
@@ -85,7 +86,7 @@ class Contents extends Component {
                                     height="170"
                                 />
                                 <div className="card-body align-items-center d-flex justify-content-center">
-                                    <span>12 <i className="fa fa-comment-o"/></span>
+                                    <span>1 <i className="fa fa-comment-o"/></span>
                                 </div>
                             </div>
                         );
@@ -112,6 +113,7 @@ class Contents extends Component {
                         <ContentModal
                             onClose={() => this.showContentModal(false)}
                             imgUrl={this.state.selectedUrl}
+                            caption={this.state.contentCaption}
                         />
                         }
                     </div>

@@ -7,7 +7,7 @@ class ContentModal extends Component {
     render(){
         return(
             <Modal
-                title=""
+                title={this.props.caption}
                 onClose={this.props.onClose}
                 footer={false}
 
@@ -25,5 +25,6 @@ export default ContentModal;
 
 ContentModal.propTypes = {
     onClose: PropTypes.func.isRequired,
-    imgUrl: PropTypes.string.isRequired
+    imgUrl: PropTypes.string.isRequired,
+    caption: PropTypes.string
 }
